@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sky Step Rush</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="hud">
+        <div>
+          <p class="label">점수</p>
+          <strong data-score>0</strong>
+        </div>
+        <div>
+          <p class="label">최고 점수</p>
+          <strong data-best>0</strong>
+        </div>
+        <div>
+          <p class="label">속도</p>
+          <strong data-speed>1.00x</strong>
+        </div>
+      </section>
+
+      <section class="timer-card">
+        <div class="timer-bar">
+          <div class="timer-fill" data-timer-fill></div>
+        </div>
+        <p class="status" data-status>← → 방향키나 버튼으로 다음 계단을 맞춰 올라가세요.</p>
+      </section>
+
+      <section class="stairs" data-steps aria-label="계단 게임 보드"></section>
+
+      <section class="controls">
+        <button type="button" data-move="-1">왼쪽 ↖</button>
+        <button type="button" data-move="0">직진 ⬆</button>
+        <button type="button" data-move="1">오른쪽 ↗</button>
+      </section>
+
+      <button class="restart" type="button" data-restart>다시 시작 (R)</button>
+    </main>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
